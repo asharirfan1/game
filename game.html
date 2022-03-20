@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Document</title>
+
+   <link rel="stylesheet" href="game.css">
+
+</head>
+
+<body background="mydp.jpg">
+   <p id="cards-el">BALCKJACK</p>
+   <P id="message-el">WANT TO PLAY A ROUND?</P>
+   <p>CARDS</p>
+   <p> Sum :</p>
+   <p id="sum-el">SUM</p>
+   <p id="player-el"></p>
+   <button onclick=" startGame()">START GAME</button>
+
+   <button onclick="newcard()">NEW card</button>
+   <script src="game.js"></script>
+
+
+
+   <!--             BUILDING A CASINO BALCKJACK GAME
+    
+                                ===> KNOWING THE CONCEPT OF CASIONO GAME
+
+                      // MAKE TWI VARIBALE FIARST CARD AND SECOND CARD
+                      /SET THEIR VALUE BETWEEN 2-11
+                      // CRATE A VARIBALE SUM AND SET IT TO SUM OF TWO CARDS
+                      
+                THIS CODE IS WRITTEN IN JS FILE, THIS IS ONLY TO MAKE YOU UNDERSTAND
+                
+        ===> CODE 
+                     
+           let FirstCard = 10
+
+          let SecondCard = 4
+
+         let Sum = FirstCard + SecondCard
+  
+         console.log(Sum) 
+
+      -->
+   <!-- IF ELSE STATEMNT -->
+
+   <!--  SYNTAX  IF (CONDITIO){
+                          
+                 COSOLE.LOG()
+            }
+
+                IF (SUM <21) { 
+
+                   CONSOLE.LOG( " DO YOU WANT TO DRAW A NEW CARD")
+                }
+                 
+                 ELSE IF  ( SUM === 21) {
+                 
+                        CONSOLE.LOG(WOHO YOU GOT A BLACKJACK)
+
+                } 
+                 ELSE IF ( SUM > 21){
+
+                    CONSOLE.LOG ( YOU ARE OUT OF GAME )
+
+                 }
+                    -->
+
+   <!-- 
+           SOME PRACTICE IF ELSE STATEMENTS
+
+                // CHECK IF A PERSON IS OLD ENOUGH TO ENTER A CLUB WHERE THE AGE REEUIRED IS 21
+        
+                // LOG A SUITALE MESSAGE IN BOTH CASES
+                
+                 CODE===>  
+                          Let age = 22
+
+                           if (age > 21 ) {
+
+                            conosle.log("welcome to the club")
+                           }
+
+                       else if ( age === 21) {
+
+                        conosle.log(" welcome to the club")
+                       }
+                                  // only cse lft is age < 21 so instead of else if we can use only else
+
+                          else {
+
+                            conosle.log ("you are no old enught to enter")
+                          }        
+      
+                  / you can try more examples like this
+                        -->
+
+   <!-- NOW WE WILL USE IF ELSE FOR OUR BLACK JACK GAME -->
+   <!-- 
+ let FirstCard = 10
+
+let SecondCard = 4
+
+ let Sum = FirstCard + SecondCard
+  
+ console.log(Sum)
+
+ if (Sum <21) { 
+
+ 
+     console.log("do you want to draw a new card")
+
+
+ }
+  
+else if   ( Sum === 21) {
+  
+         conosle.log("WOHO YOU GOT A BLACKJACK")
+
+ } 
+ 
+ else if ( Sum > 21){
+
+     conosle.log (" YOU ARE OUT OF GAME" )
+     
+  }
+    
+       // set  variable ==> Let HasBlackJack = false / setting as default , because jaav script dont remerber what we logged out previously
+       AND THEN MAKE IT TRUE IN  REqUIRED LINE
+
+       else if   ( Sum === 21) {
+  
+         conosle.log("WOHO YOU GOT A BLACKJACK")
+             Let HasBlackJack = True
+ } 
+    HERE WE ARE ONLY TRACKING THAT IF WE GOT A BLACKJACK OR NOT.. WHAT IF WE GOT VALUE GREATER THAN 21 ? 
+
+     FOR THIS WE WE SET A VAIRALE ISALIVE AND SET IT TI TRUE BY DEFAULT AND IN APPROPIRATE LINE SET IT TO FALSE
+ 
+      < These statments are eihter true or false like is it less than or greater then or eual to 
+    
+       Now we we test Some boolean conditions
+
+      conosle.log( 4===3)// true
+      conosle.log(5>2)// true
+       conosle.log(3>=3) // it is true because its not larher then but is eual to 3
+    
+-->
+
+   <!-- ADDING THE MESSAGE VARIBALE -->
+
+   <!-- 
+
+                          / DECLEARE A VAR NAME MESSAGE AND SET IT TO EMPTY STRING
+                               
+                                        Let message = ""
+
+                          / REEASSIGN THE MESSAGE VARIBALE TO STRING WE LOGGINOUT
+ 
+                           echange console.log with message
+
+                         see in js file 
+
+                         
+                     -->
+
+
+   <!--
+                                LINKING THE CSS FILE
+                      ==> TO LINK CS FILE WRITE
+                           <link rel="stylesheet" href="NAME OF FILE">
+
+                            SEE LINE  NO 6
+                                                   
+                              -->
+
+
+
+   <!--       ADDING BASIC STYLING         
+                              
+                              // ADDING SOME HTML IN LINE 6
+                               <P id="message-el">WANT TO PLAY A ROUND?</P>
+                                 <p>CARDS</p>
+                                   <p> Sum :</p>
+
+                                    NOW WE WE STYLE IT IN CSS FILE
+                              
+                              
+                              
+                              -->
+
+
+   <!--    creating a start bubtton and make it work    
+                              
+                              
+                                      // create a button
+                                      // make it call funcction strat game () when clicked
+
+                                      ===> see above line 12
+
+                                      styling the button in css file
+                              
+                              -->
+
+
+   <!--   DISPLAYING THE MASSAGE (INSTEAD OF LOGING OUT)   -->
+
+
+
+   <!-- 
+
+                 //STORE THE message-el paragraph in avariable called messageEl
+                                                                               see in js file
+                 //DISPLAY THE MESSSAGE IN messageEl using message.textcontent
+
+
+
+       -->
+   <!--  DISPLAYING THE SUM 
+                                                                         
+                       // CREATE A PARAGRAPH SUM WITH ID sum-el  ===> see line 14 above
+                              nect two lines in js file
+                       //store sum paragrpah in variable called sumEl
+                       //render the sum 
+                        
+                        
+                        
+                        
+                                              -->
+
+
+   <!--  DISPLAYING THE CARD    
+
+                                                // GIVE CARD PARAGRAPH ID card-el
+
+                                                //store card-el in varibale called cardsEl
+
+                                                // render cards on page using "cards: 10 4"
+
+                                              -->
+
+
+
+   <!--   ADD TO SUM WHEN NEW CARD IS CLCIKED 
+                              
+                              
+                              
+                                    // CREATE A VARIBALE CALLED  CARD AND ASSIGN VALUE BETWEEN 2-11
+
+                                    // ADD THE NEW CARD TO SUM VARIBALE
+
+                                    // CALL START GAME()
+                              
+                              
+                              
+                              -->
+
+
+
+   <!--   NOW THE STRAT BUTTON DOESNT MAKE ANY SENSE BEACUSE THE GAME IS ALREADY SARTED  
+                              
+                                    RENAMING THE START GAME FUNCITON
+
+                                 // RENAME START GAME FUNCTION TO RENDER GAME
+
+                                    // CREATE FUNCITON  SART GAME() THAT CALL RENDER GAME FUNCTION
+                                          SEE  JS FILE line 21
+                              -->
+
+
+
+   <!-- TILL HERE YOU CAN SEE THAT AFTER DRAWING NEW  CARD WE ONLY SEE SUM BUT NOT CARD
+                                    
+                                       ===> SOLVING CARD PROBLEM WITH ARRAY
+                                       // CREATE A VARIBALE LET CARD AS       [FirstCard , SecondCard]
+                                       // at line 30 replace 
+
+      cardsEl.textContent = "CARDS :" + FirstCard + " " +  SecondCard
+                                with
+                                            cardsEl.textContent = "CARDS :" + Card[0] + " " +  Card[1]
+
+                                            PUTTING 0 AND 1 BEACUSE ARRAY ARE SO CALLED ZERO INDEX . IT STARTS FROM 0
+                                    
+                                 -->
+
+
+
+
+   <!-- 
+                                    INRODUCTION TO ARRAY
+                                  
+                                    ===> array is basically the order list of items
+
+                                    eg creating an array
+                                     let featuredPost = "My name is ashar irfan", "i like to play cricket"
+
+
+              ====> CHALLENGE FOR YOU
+                     CREATE AN ARRAY THAT LIST YOUR name and hobby AND ITEM OF ARRAY SHOULD BE STRING
+
+                      let mySelf = "My naeme is ashar","i like to play cricket"           
+            -->
+
+
+   <!-- ARRAY WITH MULTIPLE DATA TYPES -->
+
+   <!--                                            // CREATE AN ARRAY THAT DESRIBES YOURELF. USE THREE PRIMITIVES
+                                                   DATA TYPES LIKE STRING NUMBER ADND BOOLEAN 
+                                                   
+                                                // IT SHOULD CONTAIN YOUR NAME(STRING), YOUR AGE (NUMBER), AND COHICE LIKE YOU 
+                                                   LIKE PIZZA OR NOT (BBOLEAM)
+
+                                          CODE ==> leyMyIntro = "my name is Ashar","My age is 20", "i like pizza"
+-->
+
+   <!-- ADDING AND REMOVING ITEM FROM ARRAY -->
+   <!-- 
+ 
+                  TO ADD  WE USE PUSH. LIKE IN OUR CARD GAME WE WILL USE CARD.PUSH. VARIAELA NAME AND PUSH
+
+                  ==> let card[6,2]
+                     card.push (6)
+                     conosle.log(card)    ==> lets try this in java script file -->
+
+   <!-- 
+
+        CHALLENEG ==> PUSH THE NEW MESSAGE TO MESSAGE ARRAY THEN LOGOUT ARRAY
+                   //    letMessage= [ hi i am good how are u doing]
+
+                         let newMessage = [ same here]
+
+                         ==> push newMessage to Message array and logout array
+
+                         Message.push (newMessage)
+
+                         console.log(Message)
+
+
+
+=======> REMOVING A ITEM FROM ARRAY
+
+             USE       mesage/ variable name .pop
+
+                     console.log(message)
+                -->
+
+
+   <!-- --------------------------------------------------- -->
+
+   <!--  LETS GET BACK TO OUR GAME 
+                           
+                           ===> CREATING  CARD ARRAY
+
+                            DONE AT LINE 6 AND 30 IN JS FILE        
+                           
+                           -->
+
+
+
+
+   <!-- PUSHING NEW CARD TO THE CREATED ARRAY
+         
+                  function newcard(){
+
+                     let card = 6
+                     sum =+ card
+
+                     // push card to cards array
+
+                     ==>  cards.push(card)
+                     console.log(cards)
+                     rendergame()
+
+
+
+                  }
+
+
+         -->
+
+
+
+   <!--  COUNTING IN JAVASCRIPT
+         
+         ==> TO COUNT IN JAVASCRIPT WE USE  FOR LOOP
+
+         LIKE  for  (i=0   ;                i<11  ;                                            i++)
+                 
+                    i starts from 0        loop will run till it is less than 10             increment 1
+         
+
+
+      ==> CREATING A LOOP
+                        // CREATE A LOOP TO COUNT FROM 1 TO 100 IN STEP OF 10
+
+                    ==>    for ( i=1; i<101; i+=10) 
+                    
+                        console.log(i)
+
+                        it will print 10,20,30,40,0,60,70,80,90,100
+        
+
+             -->
+
+   <!-- ---------------------------------- -->
+
+
+   <!-- ==>   for loop in array
+               
+               
+                          let message = {
+
+                                <!-- "hi my ame is Ashar . I am fine what about you"  ==> string is always written in double uotes 
+                          }
+                            
+                    we can use vairbale.length to  run the loop upto exact index
+
+                            fro ( i =0; i<message.length; i ++)   => i+=1 and i++ will do same exac thing to incement by 1
+
+                           console.log(message[i])  ==> vairale and passing i in it 
+                           
+                           -->
+
+
+   <!-- 
+   FOR LOOP ARRAY AND DOM
+
+   // CREATE A PARAGRAPH AND NAME IT ID greetings-el or any other name   
+
+
+
+   // RENDER THE ARRAY IN GREEETING EL PARAGRAPH
+
+               <p id="greetings-el">GREETING</p>      
+       
+               let sentence = ["hi ", "my ", "name ", "is ", "ashar "]
+
+                let Greeting-el = document.getElementById("greetings-el")
+                
+                for ( i =1; i < sentence.length;  i ++) {
+                greetingEl.textcontent = sentence[i]
+                }
+                it will render out only ashar because string is render in line and wehn it moves to next previous is not considered
+                so to consider it we weill write 
+            
+                                greetingEl.textcontent += sentence[i]
+                                         += is used to consider previous and add new in it 
+    -->
+
+
+
+   <!-- RETURNING A VALUE IN A FUNCTION -->
+
+   <!-- 
+
+        CODE===>    let player1Time = 100
+                   let player2Time = 150
+
+                   function FastestTime() {
+                  
+                       if ( player1Time < player2Time) {
+
+                        return player1Time
+                       }
+                      
+                       else if (player2Time < player1Time) {
+
+                        return player2Time
+                       } 
+                     
+                       else{
+                          return player1Time
+                       }
+                   }
+
+                  let FastestRaceTime = FastestTime()
+
+                  console.log(FastestRaceTime)
+
+       -->
+
+
+
+
+   <!-- BUILDING RANDOM NUMBER WITH math.random() -->
+   <!--
+   
+   
+   code==>    let randomNumber = Math.random()
+
+   console.log (randomNUmber)
+
+    it generates a random number between 0 and 1 (exclusive 1)
+
+    ==> math.random ==> range is  0.000 -> 0.999 
+ -->
+
+   <!-- math.random()*6
+                     
+                     by doing this the rnage would be 
+
+
+                     from ==> 0
+
+                     to==> 5.9999 beacuse 0.999*6 is aprox 6
+                     
+                     -->
+
+
+   <!-- flooring the numbre with math.random()
+          
+         math.floor 
+                         what does the floor.math actually does?
+
+                         ==> It takes a number and does something with number
+                         ==> it removes the decimal part
+        
+        code==>    let flooredNumber = Math.floor(3.467)
+
+                     console.log(flooredNumber)
+
+                     it will give output 3 because it removes the decial part
+       -->
+
+
+
+   <!--  USING Math.random and Math.floor TO BUILD A DICE -->
+
+   <!-- 
+
+                  ==> Math.random() *6
+                  ==> Math.floor
+
+
+                  let randomNumber = Math.floor(Math.random()*6)
+
+                  console.log(randomNumber)
+
+                  it will give output random numbers between 1 to  because
+
+                  MAth.ranodm() gives number 0.000  to 0.999
+                  Math.floor give number  0.000 to 5.999
+                   
+                  so if we do  Math.floor(Math.random()*6) ==> 0.1.2.3.4.5
+
+                  we know floor removes decimal part so we get numbers from 1 to 5  
+
+
+
+            -->
+
+
+
+   <!--  COMPLETING THE DICE FUNCTION
+
+     the  above expression retur  number berwen 1 to 6
+
+     // modify it in such a way that it retunrs random number bwteen 1 to 6
+   to do this just simply add 1
+
+    let randomNUmber = Math.floor(Math.radndom()*6) + 1
+    conosle.log(randomNumber) ==> now you can see random number between 1 to 6
+
+ -------------------------------------------
+
+
+         // create a function rollDice that returns random value between 1 to 6
+
+          code ==>   rollDice(){
+
+                     let randomNumber = Math.floor(Math.random() *6) + 1
+                     return randomNUmber
+          }
+
+          console.log(rollDice())
+
+          }
+-->
+
+
+   <!--  COMPLETING DICE FUNCTION
+                  
+                  
+                  // MAKE THE FUNCTION RETURN RANDOM VALUE BWTEEN 1 TO 13
+                  
+                  
+                         function getRandomCard(){  // make this function return value between 1 and 13
+
+             return Math.floor(Math.random()*13) +1 //Math.floor(Math.random()*13) give value till 12 so to get till 13 we add 1 
+
+      }
+    
+    ==> COMPLETING GETrANDOMcARD FUNCTION
+    
+             // IN BlckjACK GAME J,q,K HAS VALUE 10
+             // ACE HAS WIRH 1 OR 11 DEPENDING ON THE USER
+
+             IN ABOVE  FUNCTION DO
+               ==> // if 1 then return 11
+                  // if 11-13 then return 10 
+
+      
+      
+      function getRandomCard(){  // make this function return value between 1 and 13
+
+        let randomNUmber  = Math.floor(Math.random()*13) +1 //Math.floor(Math.random()*13) give value till 12 so to get till 13 we add 1 
+   
+        if (randomNUmber >  10) {
+
+          return 10
+
+        }
+
+
+        else if(randomNUmber ===1) {
+
+          return 11
+        }
+ 
+        else {
+
+          return randomNUmber 
+        }
+      }
+ 
+                  
+                  -->
+
+
+
+
+
+   <!-- ASSIGING VALUE TO STARTGAME FUNCTION
+                           
+                           
+                              TO DO  SET 
+                              let FirstCard = getRandomCard()
+
+//  let SecondCard = getRandomCard()
+ 
+// let Card = [FirstCard , SecondCard] //ARRAY // order list of item
+//  let Sum = FirstCard + SecondCard 
+ 
+                           PUT THEM  INSIDE THE START GANE FUNCTION
+                           
+                           -->
+
+
+
+   <!-- LOGICAL AND OPERATOR
+   
+===>      let hasCompleted course = true
+          let giveCertificate = true
+
+          // create a way in which if both are true then call the function
+          / we can do it with it else statement but it is a long method 
+          // so we will use logial and opertor
+
+
+          if (hasCompletedCourse === true && giveCertificate === true) {
+
+            generateCertificate()
+          }
+
+            function generateCertificate(){
+
+               console.log("generating certificate")
+            }
+   
+   
+   
+   -->
+
+
+
+   <!-- LOGICAL OR OPERTOR
+                                          
+                                            // OR OPERATTOR IS USED FOR EITHER THIS OR THAT
+
+                                            // CREATE TWO BOOLEEAN VARIABLES, likeDocumentries and likeStartups
+
+                                            // USE AN OR STATMENT (||) TO CALL recommendMovie () function, if eithr of these  are true
+
+                           
+                       code ====>     let likeDocumentaries = true
+                                    let likesStartup = true
+
+                                    if (likeDocumentaries ===true || likesStartup === true){
+
+                                             recommendMovie()
+                                           }
+
+                                          function recommendMovie(){
+
+
+                                             console.log("hey!,check out this new film")
+                                          }
+                                          
+                                          -->
+
+
+<!-- ONLY TRIGGER NEW CARD WHEN ALLOWED
+
+    // ONLY ALLOW IF USER IS ALIVE AND DOESTNOT HAS BLACK JACK
+
+          done at line 152 in js file
+
+    -->
+
+
+       <!-- ---------------------------------------------------------        -->
+
+                   <!-- OBJECT SNEAK PEAK
+                  
+                    ==> SHOW THE PLAYER NAME AND CHIPS HE GOT 
+
+                    TO DO MAKE PARAGRAPH
+
+                                       <P id="player-el"></P>
+
+                        in js file
+
+                        letPlayerName= john
+                        let PlayerChips = 145
+
+                        let player-el = document,getElementById("Player=el")
+
+                        PlayerEl.textcontent = PlayerName + ": $" + PlayerChips
+
+                      it will logout john:$14
+                      
+                      
+           TO COMBINE THE WHOLE ABOVE CODE THE WAY WE DID , WE USE OBJCTS 
+           
+           // create a object player
+
+               let player {
+
+                  name : "john"   // in objects we cant use let
+                  chips : 145     // assignment = is replaced with :
+               }
+                  
+                  let player-el = document,getElementById("Player=el")
+
+                        PlayerEl.textcontent = player.name + ": $" + playerchips // we will use dot for object
+                  -->
+<!-- -------------------------------------------------------------------------------------- 
+
+
+            /OBJECT STORES DATA IN DEPTH-COMPOSITE/COMPLEX DATA TYPES
+
+            // KEY VALUE POINTS
+
+            WE WILL SEE HOW TO CREATE AN OBJECT 
+
+// SUPPOSE THERE IS A WEBSITE OFFERING SOME COURSES 
+
+
+CODE ==>
+
+         let course = {
+
+            title : "learn css grid for free",
+
+            lesson : 16,
+             creator : john,
+             isFree =true,    // atleast one boolean
+             tags : "html", "css",
+
+         }
+
+         // using dot notation you can call any line
+
+         console.log (course.tag)
+         conosle.loh(course.title)   etc
+
+         }
+
+  
+
+
+    -->
+
+
+<!-- USING OBJECT TO STORE PLAYER DATA IN OUR GAME -->
+
+      <!--
+          // CREATE A PARAGAPG WITH ID player-el
+          
+          // create an object player with name john and chips 190
+
+          // fetch the paragraoh id with dcuent,getelementbid and store it in variable playerEL
+           // console.log player name and chips
+
+=====> code 
+            <p id = player-el </p>
+
+         let player = {
+
+            name : "john",
+
+            chips : 190
+
+            f// fetching id
+
+            playerEl = document.GetElementById("player-el")
+
+           playerEl.textcontent = player.name + " : & " + player.chips
+
+           // done this one in js you can go and have a look
+              
+         }
+      
+      -->
+
+                     <!-- CONGRATULATIONS 
+                        
+                        YOU HAVE SUCCESSFULLY MADE YOUR FIRST JAVASCRIPT GAME 
+
+
+
+                      -->
+
+</body>
+
+</html>
